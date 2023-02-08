@@ -24,14 +24,37 @@ fun Calculator(
             verticalArrangement = Arrangement.spacedBy(buttonSpacing)
         ) {
             Text(
-                text = state.number1 + (state.operation?.symbol ?: "") + state.number2,
+                text = state.number1,
                 textAlign = TextAlign.End,
-                style = TextStyle(fontSize = 64.sp),
+                style = TextStyle(fontSize = 40.sp),
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(vertical = 32.dp),
+                    .padding(vertical = 2.dp),
                 maxLines = 2
             )
+            if (state.operation?.symbol!=null){
+                Text(
+                    text = state.operation.symbol ,
+                    textAlign = TextAlign.End,
+                    style = TextStyle(fontSize = 40.sp),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 2.dp),
+                    maxLines = 2
+                )
+            }
+            if (state.number2!=""){
+
+                Text(
+                    text = state.number2,
+                    textAlign = TextAlign.End,
+                    style = TextStyle(fontSize = 40.sp),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 2.dp),
+                    maxLines = 2
+                )
+            }
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(buttonSpacing)

@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     val viewModel = viewModel<CalculatorViewModel>()
                     val state = viewModel.state
-                    val buttonSpacing = 8.dp
+                    val buttonSpacing = 2.dp
                     Calculator(
                         state = state,
                         onAction = { viewModel.onAction(it) },
