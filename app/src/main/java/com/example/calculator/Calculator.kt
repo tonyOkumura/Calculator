@@ -32,9 +32,9 @@ fun Calculator(
                     .padding(vertical = 2.dp),
                 maxLines = 2
             )
-            if (state.operation?.symbol!=null){
+            if (state.operation?.symbol != null) {
                 Text(
-                    text = state.operation.symbol ,
+                    text = state.operation.symbol,
                     textAlign = TextAlign.End,
                     style = TextStyle(fontSize = 40.sp),
                     modifier = Modifier
@@ -43,8 +43,7 @@ fun Calculator(
                     maxLines = 2
                 )
             }
-            if (state.number2!=""){
-
+            if (state.number2 != "") {
                 Text(
                     text = state.number2,
                     textAlign = TextAlign.End,
@@ -238,7 +237,8 @@ fun Calculator(
                         .aspectRatio(1f)
                         .weight(1f),
                     onClick = {
-                        onAction(CalculatorAction.Calculate
+                        onAction(
+                            CalculatorAction.Calculate
                         )
                     }
                 )
